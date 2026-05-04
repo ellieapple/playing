@@ -1,0 +1,142 @@
+/* PixelCraft Portfolio – custom styles (Tailwind handles the rest) */
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ── Navbar ── */
+custom-navbar {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+nav {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+    background-color: #fff !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+nav.scrolled .nav-link {
+    color: #1E293B !important;
+}
+
+nav.scrolled .nav-logo {
+    color: #3B82F6 !important;
+}
+
+/* Nav links */
+.nav-link {
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.2s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3B82F6;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ── Project cards ── */
+.project-card {
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.project-card.hidden {
+    display: none;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ── Filter buttons ── */
+.filter-btn {
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-btn.active {
+    background-color: #3B82F6;
+    color: #fff;
+}
+
+/* ── Process timeline ── */
+.process-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.process-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Skill cards ── */
+.skill-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(59, 130, 246, 0.12);
+}
+
+/* ── Tool pills ── */
+.tool-item {
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tool-item:hover {
+    background-color: #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Testimonial cards ── */
+.testimonial-card {
+    transition: transform 0.2s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Feather star fill helper */
+.fill-current {
+    fill: currentColor;
+}
+
+/* ── Mobile menu ── */
+#mobile-menu {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#mobile-menu.open {
+    max-height: 400px;
+    opacity: 1;
+}
+
+/* ── Footer ── */
+custom-footer {
+    display: block;
+}

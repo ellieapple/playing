@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelCraft | UX/UI Designer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1E293B',
+                        light: '#F8FAFC'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="bg-light text-dark font-sans antialiased">
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-gradient-to-br from-primary to-purple-600 overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="container mx-auto px-6 z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Crafting Digital Experiences</h1>
+                    <p class="text-xl text-white opacity-90 mb-8">I design intuitive interfaces that users love and businesses thrive on.</p>
+                    <a href="#projects" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition duration-300 inline-block">View My Work</a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl">
+                        <img src="https://picsum.photos/seed/pixelcraft/640/640" alt="Designer at work" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+            <a href="#about" class="text-white animate-bounce block">
+                <i data-feather="chevron-down" class="w-8 h-8"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Selected case studies showcasing my design process and problem-solving approach</p>
+            </div>
+
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex flex-wrap justify-center gap-2">
+                    <button class="filter-btn active px-4 py-2 rounded-full bg-primary text-white" data-filter="all">All</button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="ui">UI Design</button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="ux">UX Design</button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="web">Web Design</button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="mobile">Mobile</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card group" data-tags="ui,web">
+                    <div class="overflow-hidden rounded-xl shadow-lg mb-4">
+                        <img src="https://picsum.photos/seed/proj1/640/360" alt="E-commerce Website Redesign" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">E-commerce Website Redesign</h3>
+                    <p class="text-gray-600 mb-4">Transformed an outdated e-commerce platform into a modern shopping experience.</p>
+                    <a href="#" class="text-primary font-semibold flex items-center">
+                        View Case Study
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card group" data-tags="ux,mobile">
+                    <div class="overflow-hidden rounded-xl shadow-lg mb-4">
+                        <img src="https://picsum.photos/seed/proj2/640/360" alt="Fitness App UX Overhaul" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Fitness App UX Overhaul</h3>
+                    <p class="text-gray-600 mb-4">Improved user retention by 40% through strategic UX enhancements.</p>
+                    <a href="#" class="text-primary font-semibold flex items-center">
+                        View Case Study
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card group" data-tags="ui,ux,web">
+                    <div class="overflow-hidden rounded-xl shadow-lg mb-4">
+                        <img src="https://picsum.photos/seed/proj3/640/360" alt="SaaS Dashboard Interface" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">SaaS Dashboard Interface</h3>
+                    <p class="text-gray-600 mb-4">Created an intuitive admin dashboard for a complex analytics platform.</p>
+                    <a href="#" class="text-primary font-semibold flex items-center">
+                        View Case Study
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card group" data-tags="mobile,ux">
+                    <div class="overflow-hidden rounded-xl shadow-lg mb-4">
+                        <img src="https://picsum.photos/seed/proj4/640/360" alt="Banking App Onboarding" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Banking App Onboarding</h3>
+                    <p class="text-gray-600 mb-4">Reduced drop-off rates by 65% with a streamlined onboarding flow.</p>
+                    <a href="#" class="text-primary font-semibold flex items-center">
+                        View Case Study
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card group" data-tags="ui,web">
+                    <div class="overflow-hidden rounded-xl shadow-lg mb-4">
+                        <img src="https://picsum.photos/seed/proj5/640/360" alt="Travel Booking Platform" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Travel Booking Platform</h3>
+                    <p class="text-gray-600 mb-4">Designed a responsive booking interface for a global travel agency.</p>
+                    <a href="#" class="text-primary font-semibold flex items-center">
+                        View Case Study
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card group" data-tags="ux,web">
+                    <div class="overflow-hidden rounded-xl shadow-lg mb-4">
+                        <img src="https://picsum.photos/seed/proj6/640/360" alt="Nonprofit Website Redesign" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Nonprofit Website Redesign</h3>
+                    <p class="text-gray-600 mb-4">Increased donations by 120% with a user-centered redesign.</p>
+                    <a href="#" class="text-primary font-semibold flex items-center">
+                        View Case Study
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition duration-300">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My Design Process</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">A structured approach to solving problems and creating impactful designs</p>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-primary transform -translate-x-1/2"></div>
+
+                <div class="space-y-12 md:space-y-0">
+                    <!-- Step 1 -->
+                    <div class="process-item relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 p-6">
+                            <div class="bg-white p-8 rounded-xl shadow-lg">
+                                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4">
+                                    <span class="text-2xl font-bold">1</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Research &amp; Discovery</h3>
+                                <p class="text-gray-600">Understanding user needs, business goals, and market context through interviews, surveys, and competitive analysis.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:w-1/2 p-6"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="process-item relative flex flex-col md:flex-row-reverse items-center">
+                        <div class="md:w-1/2 p-6">
+                            <div class="bg-white p-8 rounded-xl shadow-lg">
+                                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4">
+                                    <span class="text-2xl font-bold">2</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Define &amp; Ideate</h3>
+                                <p class="text-gray-600">Synthesizing research findings into user personas, journey maps, and problem statements. Generating creative solutions through brainstorming.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:w-1/2 p-6"></div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="process-item relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 p-6">
+                            <div class="bg-white p-8 rounded-xl shadow-lg">
+                                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4">
+                                    <span class="text-2xl font-bold">3</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Prototype &amp; Test</h3>
+                                <p class="text-gray-600">Creating low to high fidelity prototypes and conducting usability tests to validate concepts and iterate based on feedback.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:w-1/2 p-6"></div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="process-item relative flex flex-col md:flex-row-reverse items-center">
+                        <div class="md:w-1/2 p-6">
+                            <div class="bg-white p-8 rounded-xl shadow-lg">
+                                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4">
+                                    <span class="text-2xl font-bold">4</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Refine &amp; Implement</h3>
+                                <p class="text-gray-600">Polishing designs based on testing results, creating design systems, and collaborating with developers for seamless implementation.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:w-1/2 p-6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Tools -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Skills &amp; Tools</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">The techniques and technologies I use to bring designs to life</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <div class="skill-card p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="layout" class="text-primary w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">UI Design</h3>
+                    <p class="text-sm text-gray-600">Creating beautiful, functional interfaces</p>
+                </div>
+
+                <div class="skill-card p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="user" class="text-primary w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">UX Research</h3>
+                    <p class="text-sm text-gray-600">Understanding user needs and behaviors</p>
+                </div>
+
+                <div class="skill-card p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="smartphone" class="text-primary w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Mobile Design</h3>
+                    <p class="text-sm text-gray-600">Crafting seamless mobile experiences</p>
+                </div>
+
+                <div class="skill-card p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="code" class="text-primary w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Prototyping</h3>
+                    <p class="text-sm text-gray-600">Interactive prototypes for validation</p>
+                </div>
+
+                <div class="skill-card p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="type" class="text-primary w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Typography</h3>
+                    <p class="text-sm text-gray-600">Thoughtful type hierarchy and pairing</p>
+                </div>
+
+                <div class="skill-card p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="grid" class="text-primary w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">App Icon Design</h3>
+                    <p class="text-sm text-gray-600">Creating distinctive app icons</p>
+                </div>
+            </div>
+
+            <div class="mt-16">
+                <h3 class="text-xl font-bold mb-6 text-center">Design Tools</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="tool-item bg-gray-50 px-6 py-3 rounded-full flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" class="h-6 mr-2">
+                        <span>Figma</span>
+                    </div>
+                    <div class="tool-item bg-gray-50 px-6 py-3 rounded-full flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Adobe_XD_CC_icon.svg" alt="Adobe XD" class="h-6 mr-2">
+                        <span>Adobe XD</span>
+                    </div>
+                    <div class="tool-item bg-gray-50 px-6 py-3 rounded-full flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop" class="h-6 mr-2">
+                        <span>Photoshop</span>
+                    </div>
+                    <div class="tool-item bg-gray-50 px-6 py-3 rounded-full flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Adobe_Illustrator_CC_icon.svg" alt="Illustrator" class="h-6 mr-2">
+                        <span>Illustrator</span>
+                    </div>
+                    <div class="tool-item bg-gray-50 px-6 py-3 rounded-full flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Proto.io_Logo.svg" alt="Proto.io" class="h-6 mr-2">
+                        <span>Proto.io</span>
+                    </div>
+                    <div class="tool-item bg-gray-50 px-6 py-3 rounded-full flex items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Android_Studio_Logo.svg" alt="Android Studio" class="h-6 mr-2">
+                        <span>Android Studio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">What people I've worked with say about my work</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-800 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://picsum.photos/seed/sarah/200/200" alt="Sarah Johnson" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-400 text-sm">Product Manager, TechCorp</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">"Working with this designer was a game-changer for our product. They took the time to truly understand our users and delivered designs that exceeded our expectations."</p>
+                    <div class="flex text-yellow-400">
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-800 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://picsum.photos/seed/michael/200/200" alt="Michael Chen" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-400 text-sm">CEO, StartupHub</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">"The redesign increased our conversion rate by 45%. Their attention to detail and user-centered approach made all the difference."</p>
+                    <div class="flex text-yellow-400">
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-800 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://picsum.photos/seed/emma/200/200" alt="Emma Rodriguez" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Emma Rodriguez</h4>
+                            <p class="text-gray-400 text-sm">Marketing Director, BrandCo</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">"Not only are the designs stunning, but they also solve real business problems. We've seen a significant improvement in user engagement since launch."</p>
+                    <div class="flex text-yellow-400">
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to create something amazing together?</h2>
+            <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">I'm currently taking on new projects. Let's discuss how I can help bring your vision to life.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:hello@pixelcraft.design" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition duration-300 inline-block">Hire Me</a>
+                <a href="mailto:hello@pixelcraft.design" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition duration-300 inline-block">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

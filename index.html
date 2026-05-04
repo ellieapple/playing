@@ -3,415 +3,659 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixelCraft | UX/UI Designer Portfolio</title>
+    <title>Evergreen Digital | Colorado Web Design &amp; SEO Agency</title>
+    <meta name="description" content="Colorado's top-rated web design and SEO agency. We help local businesses rank higher, convert more, and grow faster. 150+ clients. $18M+ revenue driven.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#3B82F6',
-                        secondary: '#10B981',
-                        dark: '#1E293B',
-                        light: '#F8FAFC'
-                    }
-                }
-            }
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
-<body class="bg-light text-dark font-sans antialiased">
-    <custom-navbar></custom-navbar>
+<body>
 
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center bg-gradient-to-br from-primary to-purple-600 overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="container mx-auto px-6 z-10">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Crafting Digital Experiences</h1>
-                    <p class="text-xl text-white opacity-90 mb-8">I design intuitive interfaces that users love and businesses thrive on.</p>
-                    <a href="#projects" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition duration-300 inline-block">View My Work</a>
+<!-- Grain overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Custom cursor (desktop only) -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<custom-navbar></custom-navbar>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<section class="hero" id="home">
+    <div class="hero-bg">
+        <svg class="hero-mountain" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+                <linearGradient id="mtn-far" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1a3a28" stop-opacity="0.5"/>
+                    <stop offset="100%" stop-color="#0d1f1a" stop-opacity="1"/>
+                </linearGradient>
+                <linearGradient id="mtn-mid" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#122418" stop-opacity="0.9"/>
+                    <stop offset="100%" stop-color="#0d1f1a" stop-opacity="1"/>
+                </linearGradient>
+                <linearGradient id="mtn-near" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#091510" stop-opacity="1"/>
+                    <stop offset="100%" stop-color="#0d1f1a" stop-opacity="1"/>
+                </linearGradient>
+                <radialGradient id="alpenglow" cx="50%" cy="38%" r="48%">
+                    <stop offset="0%" stop-color="#c4952a" stop-opacity="0.20"/>
+                    <stop offset="100%" stop-color="#c4952a" stop-opacity="0"/>
+                </radialGradient>
+                <filter id="mtn-blur"><feGaussianBlur stdDeviation="1.5"/></filter>
+            </defs>
+            <!-- Far ridge -->
+            <path filter="url(#mtn-blur)" fill="url(#mtn-far)" d="M0,350 L80,290 L160,318 L240,248 L320,292 L400,218 L480,268 L560,194 L640,244 L720,168 L800,220 L880,158 L960,214 L1040,174 L1120,228 L1200,182 L1280,238 L1360,198 L1440,248 L1440,600 L0,600 Z"/>
+            <!-- Alpenglow -->
+            <ellipse cx="720" cy="210" rx="500" ry="130" fill="url(#alpenglow)"/>
+            <!-- Mid ridge -->
+            <path fill="url(#mtn-mid)" d="M0,400 L120,330 L200,362 L300,284 L400,338 L520,264 L600,314 L720,244 L820,298 L920,248 L1020,304 L1120,264 L1220,314 L1320,278 L1440,324 L1440,600 L0,600 Z"/>
+            <!-- Near ridge -->
+            <path fill="url(#mtn-near)" d="M0,480 L100,428 L180,454 L280,398 L360,438 L460,388 L560,428 L660,378 L760,418 L860,374 L960,414 L1060,384 L1160,424 L1260,398 L1360,434 L1440,414 L1440,600 L0,600 Z"/>
+        </svg>
+    </div>
+
+    <div class="hero-content">
+        <div class="section-label">Colorado · Digital Marketing</div>
+        <h1 class="word-reveal">We Grow Colorado Businesses Online.</h1>
+        <p class="hero-desc">From stunning, conversion-optimized websites to <em>#1 Google rankings</em> — we deliver measurable results that move your bottom line.</p>
+        <div class="hero-ctas">
+            <a href="#results" class="btn btn-gold">See Our Results</a>
+            <a href="#services" class="btn btn-ghost">Explore Services</a>
+        </div>
+    </div>
+
+    <div class="hero-meta" aria-label="Location and year established">
+        <span>Denver, CO &nbsp;·&nbsp; Est. 2019</span>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+        <span class="scroll-label">Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- Ridge -->
+<div class="ridge" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#0f1f18" d="M0,80 L0,55 L60,35 L120,58 L200,22 L280,48 L360,18 L440,42 L520,12 L600,38 L680,10 L760,32 L840,14 L920,40 L1000,20 L1080,44 L1160,24 L1240,50 L1320,28 L1380,42 L1440,30 L1440,80 Z"/></svg></div>
+
+<!-- ═══════════════════════════════════════════
+     SOCIAL PROOF BAR
+════════════════════════════════════════════ -->
+<section class="proof-bar" style="background:var(--elev-ascending)">
+    <div class="container">
+        <div class="proof-grid">
+            <div class="proof-item">
+                <div class="proof-stars">★★★★★</div>
+                <div class="proof-val">5.0 Google Rating</div>
+                <div class="proof-sub">140+ verified reviews</div>
+            </div>
+            <div class="proof-sep" aria-hidden="true"></div>
+            <div class="proof-item">
+                <div class="proof-val"><span data-count="150">0</span>+ Clients</div>
+                <div class="proof-sub">Colorado businesses served</div>
+            </div>
+            <div class="proof-sep" aria-hidden="true"></div>
+            <div class="proof-item">
+                <div class="proof-val">$<span data-count="18">0</span>M+ Revenue</div>
+                <div class="proof-sub">Driven for our clients</div>
+            </div>
+            <div class="proof-sep" aria-hidden="true"></div>
+            <div class="proof-item">
+                <div class="proof-val"><span data-count="96">0</span>%</div>
+                <div class="proof-sub">Client retention rate</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ridge -->
+<div class="ridge" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#121a15" d="M0,80 L0,50 L80,20 L160,50 L240,25 L320,55 L400,15 L480,45 L560,20 L640,48 L720,15 L800,40 L880,18 L960,45 L1040,22 L1120,50 L1200,28 L1280,52 L1360,30 L1440,48 L1440,80 Z"/></svg></div>
+
+<!-- ═══════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════ -->
+<section class="section" id="services" style="background:var(--elev-treeline)">
+    <div class="container">
+        <div class="section-label">What We Do</div>
+        <h2 class="word-reveal">Everything you need to <em>dominate</em> your market.</h2>
+
+        <div class="services-grid">
+            <div class="service-card reveal-item">
+                <div class="service-num">01</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
                 </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl">
-                        <img src="https://picsum.photos/seed/pixelcraft/640/640" alt="Designer at work" class="w-full h-full object-cover">
+                <h3>Web Design &amp; Development</h3>
+                <p>Custom, mobile-first websites built to convert visitors into customers — fast, beautiful, and Google-friendly from day one.</p>
+                <ul class="service-features">
+                    <li>Conversion-optimized layouts</li>
+                    <li>Sub-2 second load times</li>
+                    <li>100/100 PageSpeed scores</li>
+                    <li>ADA accessible &amp; secure</li>
+                </ul>
+                <div class="service-example">
+                    <span class="example-label">Recent win:</span> Rocky Mountain HVAC — new site ranked #1 on Google in 6 months, 340% more leads
+                </div>
+            </div>
+
+            <div class="service-card reveal-item">
+                <div class="service-num">02</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </div>
+                <h3>Search Engine Optimization</h3>
+                <p>Rank higher for the keywords your customers actually search. Sustainable, white-hat growth that compounds over time.</p>
+                <ul class="service-features">
+                    <li>Technical SEO audits</li>
+                    <li>Keyword research &amp; targeting</li>
+                    <li>Content creation &amp; optimization</li>
+                    <li>Authority link building</li>
+                </ul>
+                <div class="service-example">
+                    <span class="example-label">Recent win:</span> Front Range Auto — 4.2× organic traffic in 5 months, 127 new Google calls/month
+                </div>
+            </div>
+
+            <div class="service-card reveal-item">
+                <div class="service-num">03</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3>Local SEO</h3>
+                <p>Dominate Google Maps and the Local 3-Pack. Get found by high-intent customers in your city the moment they're ready to buy.</p>
+                <ul class="service-features">
+                    <li>Google Business Profile optimization</li>
+                    <li>Local citation &amp; directory building</li>
+                    <li>Review generation strategy</li>
+                    <li>Geo-targeted content creation</li>
+                </ul>
+                <div class="service-example">
+                    <span class="example-label">Recent win:</span> Peaks Dental — #1 in Maps for "Denver dentist," 28 new patients/month from Google alone
+                </div>
+            </div>
+
+            <div class="service-card reveal-item">
+                <div class="service-num">04</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <h3>Google Ads (PPC)</h3>
+                <p>Pay-per-click campaigns engineered for ROI. We write the ads, manage the bids, and optimize relentlessly — so you spend less to earn more.</p>
+                <ul class="service-features">
+                    <li>Search, display &amp; retargeting</li>
+                    <li>Conversion tracking setup</li>
+                    <li>Landing page optimization</li>
+                    <li>Weekly performance reports</li>
+                </ul>
+                <div class="service-example">
+                    <span class="example-label">Recent win:</span> Summit Roofing — cost-per-lead dropped 67% in 90 days, $870K pipeline generated
+                </div>
+            </div>
+
+            <div class="service-card reveal-item">
+                <div class="service-num">05</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </div>
+                <h3>Social Media Marketing</h3>
+                <p>Build a loyal audience and turn followers into customers with consistent, brand-driven content and targeted paid campaigns.</p>
+                <ul class="service-features">
+                    <li>Content strategy &amp; creation</li>
+                    <li>Facebook &amp; Instagram Ads</li>
+                    <li>Community management</li>
+                    <li>Paid social campaigns</li>
+                </ul>
+                <div class="service-example">
+                    <span class="example-label">Recent win:</span> Alpine Landscaping — 12K new followers in 6 months, 38% of new leads from Instagram
+                </div>
+            </div>
+
+            <div class="service-card reveal-item">
+                <div class="service-num">06</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <h3>Analytics &amp; Reporting</h3>
+                <p>Know exactly what's working and what isn't. Monthly reports with real KPIs, ranking changes, traffic breakdowns, and clear action items.</p>
+                <ul class="service-features">
+                    <li>Google Analytics 4 setup</li>
+                    <li>Custom KPI dashboards</li>
+                    <li>Keyword rank tracking</li>
+                    <li>Competitor monitoring</li>
+                </ul>
+                <div class="service-example">
+                    <span class="example-label">Typical insight:</span> Identified that 60% of a client's ad spend was wasted on irrelevant keywords — fixed in week one
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ridge -->
+<div class="ridge" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#0e1c18" d="M0,80 L0,60 L100,30 L180,55 L260,18 L360,50 L440,22 L540,52 L640,16 L720,45 L820,12 L920,42 L1020,18 L1100,48 L1200,20 L1300,50 L1380,28 L1440,45 L1440,80 Z"/></svg></div>
+
+<!-- ═══════════════════════════════════════════
+     RESULTS / CASE STUDIES
+════════════════════════════════════════════ -->
+<section class="section" id="results" style="background:var(--elev-rock)">
+    <div class="container">
+        <div class="section-label">Proof Over Promise</div>
+        <h2 class="word-reveal">Real clients. <em>Real results.</em></h2>
+
+        <!-- Hero case study -->
+        <div class="case-hero reveal-item">
+            <div class="case-hero-bg">
+                <div class="case-topo" aria-hidden="true"></div>
+            </div>
+            <div class="case-hero-body">
+                <div class="case-num">01</div>
+                <div class="case-tags">
+                    <span class="case-tag">Web Design</span>
+                    <span class="case-tag">SEO</span>
+                    <span class="case-year">2024</span>
+                </div>
+                <h3>Rocky Mountain HVAC</h3>
+                <p>An HVAC company stuck on page 3 was losing leads to competitors daily. We rebuilt their site from scratch and launched a full SEO campaign targeting 42 high-intent keywords across Denver and 8 suburbs. Within 8 months they owned the top of Google.</p>
+                <div class="case-stats">
+                    <div class="case-stat">
+                        <span class="case-stat-n">+340%</span>
+                        <span class="case-stat-l">Organic leads</span>
+                    </div>
+                    <div class="case-stat">
+                        <span class="case-stat-n">#1</span>
+                        <span class="case-stat-l">Google for "Denver HVAC"</span>
+                    </div>
+                    <div class="case-stat">
+                        <span class="case-stat-n">8 mo</span>
+                        <span class="case-stat-l">Time to top ranking</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-            <a href="#about" class="text-white animate-bounce block">
-                <i data-feather="chevron-down" class="w-8 h-8"></i>
-            </a>
-        </div>
-    </section>
 
-    <!-- Projects Grid -->
-    <section id="projects" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Selected case studies showcasing my design process and problem-solving approach</p>
-            </div>
-
-            <div class="flex justify-center mb-12">
-                <div class="inline-flex flex-wrap justify-center gap-2">
-                    <button class="filter-btn active px-4 py-2 rounded-full bg-primary text-white" data-filter="all">All</button>
-                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="ui">UI Design</button>
-                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="ux">UX Design</button>
-                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="web">Web Design</button>
-                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="mobile">Mobile</button>
+        <!-- Case study grid -->
+        <div class="cases-grid">
+            <div class="case-card reveal-item" style="--card-from:#0c1f22;--card-to:#091a18">
+                <div class="case-card-bg"><div class="case-topo"></div></div>
+                <div class="case-card-body">
+                    <div class="case-num">02</div>
+                    <div class="case-tags"><span class="case-tag">Local SEO</span><span class="case-year">2024</span></div>
+                    <h3>Front Range Auto Repair</h3>
+                    <p>Tripled inbound calls with a new site and local SEO targeting 6 Denver suburbs.</p>
+                    <div class="case-stats">
+                        <div class="case-stat"><span class="case-stat-n">4.2×</span><span class="case-stat-l">Organic traffic</span></div>
+                        <div class="case-stat"><span class="case-stat-n">+127</span><span class="case-stat-l">Google calls/month</span></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card group" data-tags="ui,web">
-                    <div class="overflow-hidden rounded-xl shadow-lg mb-4">
-                        <img src="https://picsum.photos/seed/proj1/640/360" alt="E-commerce Website Redesign" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+            <div class="case-card reveal-item" style="--card-from:#1a1a0c;--card-to:#0f1508">
+                <div class="case-card-bg"><div class="case-topo"></div></div>
+                <div class="case-card-body">
+                    <div class="case-num">03</div>
+                    <div class="case-tags"><span class="case-tag">Google Ads</span><span class="case-year">2023</span></div>
+                    <h3>Summit Roofing Co.</h3>
+                    <p>Rebuilt PPC campaigns from scratch. Same budget — dramatically better results in 90 days.</p>
+                    <div class="case-stats">
+                        <div class="case-stat"><span class="case-stat-n">−67%</span><span class="case-stat-l">Cost per lead</span></div>
+                        <div class="case-stat"><span class="case-stat-n">$870K</span><span class="case-stat-l">Pipeline generated</span></div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">E-commerce Website Redesign</h3>
-                    <p class="text-gray-600 mb-4">Transformed an outdated e-commerce platform into a modern shopping experience.</p>
-                    <a href="#" class="text-primary font-semibold flex items-center">
-                        View Case Study
-                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card group" data-tags="ux,mobile">
-                    <div class="overflow-hidden rounded-xl shadow-lg mb-4">
-                        <img src="https://picsum.photos/seed/proj2/640/360" alt="Fitness App UX Overhaul" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Fitness App UX Overhaul</h3>
-                    <p class="text-gray-600 mb-4">Improved user retention by 40% through strategic UX enhancements.</p>
-                    <a href="#" class="text-primary font-semibold flex items-center">
-                        View Case Study
-                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card group" data-tags="ui,ux,web">
-                    <div class="overflow-hidden rounded-xl shadow-lg mb-4">
-                        <img src="https://picsum.photos/seed/proj3/640/360" alt="SaaS Dashboard Interface" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">SaaS Dashboard Interface</h3>
-                    <p class="text-gray-600 mb-4">Created an intuitive admin dashboard for a complex analytics platform.</p>
-                    <a href="#" class="text-primary font-semibold flex items-center">
-                        View Case Study
-                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card group" data-tags="mobile,ux">
-                    <div class="overflow-hidden rounded-xl shadow-lg mb-4">
-                        <img src="https://picsum.photos/seed/proj4/640/360" alt="Banking App Onboarding" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Banking App Onboarding</h3>
-                    <p class="text-gray-600 mb-4">Reduced drop-off rates by 65% with a streamlined onboarding flow.</p>
-                    <a href="#" class="text-primary font-semibold flex items-center">
-                        View Case Study
-                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card group" data-tags="ui,web">
-                    <div class="overflow-hidden rounded-xl shadow-lg mb-4">
-                        <img src="https://picsum.photos/seed/proj5/640/360" alt="Travel Booking Platform" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Travel Booking Platform</h3>
-                    <p class="text-gray-600 mb-4">Designed a responsive booking interface for a global travel agency.</p>
-                    <a href="#" class="text-primary font-semibold flex items-center">
-                        View Case Study
-                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card group" data-tags="ux,web">
-                    <div class="overflow-hidden rounded-xl shadow-lg mb-4">
-                        <img src="https://picsum.photos/seed/proj6/640/360" alt="Nonprofit Website Redesign" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Nonprofit Website Redesign</h3>
-                    <p class="text-gray-600 mb-4">Increased donations by 120% with a user-centered redesign.</p>
-                    <a href="#" class="text-primary font-semibold flex items-center">
-                        View Case Study
-                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
-                    </a>
                 </div>
             </div>
 
-            <div class="text-center mt-12">
-                <a href="#" class="inline-block border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition duration-300">
-                    View All Projects
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Design Process -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">My Design Process</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">A structured approach to solving problems and creating impactful designs</p>
+            <div class="case-card reveal-item" style="--card-from:#0a1f1c;--card-to:#071816">
+                <div class="case-card-bg"><div class="case-topo"></div></div>
+                <div class="case-card-body">
+                    <div class="case-num">04</div>
+                    <div class="case-tags"><span class="case-tag">Web Design</span><span class="case-tag">E-comm</span><span class="case-year">2024</span></div>
+                    <h3>Colorado Pet Care</h3>
+                    <p>Conversion-optimized e-commerce storefront turned casual browsers into buyers.</p>
+                    <div class="case-stats">
+                        <div class="case-stat"><span class="case-stat-n">+87%</span><span class="case-stat-l">Conversion rate</span></div>
+                        <div class="case-stat"><span class="case-stat-n">+$180K</span><span class="case-stat-l">Revenue, year 1</span></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="relative">
-                <!-- Timeline line -->
-                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-primary transform -translate-x-1/2"></div>
-
-                <div class="space-y-12 md:space-y-0">
-                    <!-- Step 1 -->
-                    <div class="process-item relative flex flex-col md:flex-row items-center">
-                        <div class="md:w-1/2 p-6">
-                            <div class="bg-white p-8 rounded-xl shadow-lg">
-                                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4">
-                                    <span class="text-2xl font-bold">1</span>
-                                </div>
-                                <h3 class="text-xl font-bold mb-3">Research &amp; Discovery</h3>
-                                <p class="text-gray-600">Understanding user needs, business goals, and market context through interviews, surveys, and competitive analysis.</p>
-                            </div>
-                        </div>
-                        <div class="hidden md:block md:w-1/2 p-6"></div>
+            <div class="case-card reveal-item" style="--card-from:#1a0c12;--card-to:#14081a">
+                <div class="case-card-bg"><div class="case-topo"></div></div>
+                <div class="case-card-body">
+                    <div class="case-num">05</div>
+                    <div class="case-tags"><span class="case-tag">Local SEO</span><span class="case-year">2023</span></div>
+                    <h3>Peaks Dental Group</h3>
+                    <p>Ranked 3 Denver locations in the Maps 3-Pack for competitive dental keywords.</p>
+                    <div class="case-stats">
+                        <div class="case-stat"><span class="case-stat-n">#1</span><span class="case-stat-l">"Denver dentist" Maps</span></div>
+                        <div class="case-stat"><span class="case-stat-n">+28</span><span class="case-stat-l">New patients/month</span></div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Step 2 -->
-                    <div class="process-item relative flex flex-col md:flex-row-reverse items-center">
-                        <div class="md:w-1/2 p-6">
-                            <div class="bg-white p-8 rounded-xl shadow-lg">
-                                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4">
-                                    <span class="text-2xl font-bold">2</span>
-                                </div>
-                                <h3 class="text-xl font-bold mb-3">Define &amp; Ideate</h3>
-                                <p class="text-gray-600">Synthesizing research findings into user personas, journey maps, and problem statements. Generating creative solutions through brainstorming.</p>
-                            </div>
-                        </div>
-                        <div class="hidden md:block md:w-1/2 p-6"></div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="process-item relative flex flex-col md:flex-row items-center">
-                        <div class="md:w-1/2 p-6">
-                            <div class="bg-white p-8 rounded-xl shadow-lg">
-                                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4">
-                                    <span class="text-2xl font-bold">3</span>
-                                </div>
-                                <h3 class="text-xl font-bold mb-3">Prototype &amp; Test</h3>
-                                <p class="text-gray-600">Creating low to high fidelity prototypes and conducting usability tests to validate concepts and iterate based on feedback.</p>
-                            </div>
-                        </div>
-                        <div class="hidden md:block md:w-1/2 p-6"></div>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="process-item relative flex flex-col md:flex-row-reverse items-center">
-                        <div class="md:w-1/2 p-6">
-                            <div class="bg-white p-8 rounded-xl shadow-lg">
-                                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4">
-                                    <span class="text-2xl font-bold">4</span>
-                                </div>
-                                <h3 class="text-xl font-bold mb-3">Refine &amp; Implement</h3>
-                                <p class="text-gray-600">Polishing designs based on testing results, creating design systems, and collaborating with developers for seamless implementation.</p>
-                            </div>
-                        </div>
-                        <div class="hidden md:block md:w-1/2 p-6"></div>
+            <div class="case-card reveal-item" style="--card-from:#0d1f0a;--card-to:#091508">
+                <div class="case-card-bg"><div class="case-topo"></div></div>
+                <div class="case-card-body">
+                    <div class="case-num">06</div>
+                    <div class="case-tags"><span class="case-tag">Full Strategy</span><span class="case-year">2023–24</span></div>
+                    <h3>Alpine Landscaping</h3>
+                    <p>Zero digital presence to market leader. Website + SEO + Google Ads + social, fully managed.</p>
+                    <div class="case-stats">
+                        <div class="case-stat"><span class="case-stat-n">$310K</span><span class="case-stat-l">Added revenue, yr 1</span></div>
+                        <div class="case-stat"><span class="case-stat-n">6×</span><span class="case-stat-l">ROI on ad spend</span></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Skills & Tools -->
-    <section id="skills" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Skills &amp; Tools</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">The techniques and technologies I use to bring designs to life</p>
+<!-- Ridge -->
+<div class="ridge" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#0d1f1a" d="M0,80 L0,45 L80,25 L160,50 L240,15 L320,45 L420,20 L500,48 L580,22 L680,50 L760,18 L840,44 L940,14 L1020,42 L1120,22 L1200,48 L1300,26 L1380,46 L1440,35 L1440,80 Z"/></svg></div>
+
+<!-- ═══════════════════════════════════════════
+     BY THE NUMBERS
+════════════════════════════════════════════ -->
+<section class="section numbers-section topo-texture" id="numbers" style="background:var(--elev-valley)">
+    <div class="container">
+        <div class="section-label">By The Numbers</div>
+        <div class="numbers-grid">
+            <div class="number-item reveal-item">
+                <div class="number-line" aria-hidden="true"></div>
+                <div class="number-val"><span data-count="150">0</span>+</div>
+                <div class="number-label">Brands Elevated</div>
             </div>
+            <div class="number-item reveal-item">
+                <div class="number-line" aria-hidden="true"></div>
+                <div class="number-val">$<span data-count="18">0</span>M+</div>
+                <div class="number-label">Revenue Driven</div>
+            </div>
+            <div class="number-item reveal-item">
+                <div class="number-line" aria-hidden="true"></div>
+                <div class="number-val"><span data-count="6">0</span></div>
+                <div class="number-label">Years of Craft</div>
+            </div>
+            <div class="number-item reveal-item">
+                <div class="number-line" aria-hidden="true"></div>
+                <div class="number-val"><span data-count="96">0</span>%</div>
+                <div class="number-label">Client Retention</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-                <div class="skill-card p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition text-center">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="layout" class="text-primary w-8 h-8"></i>
-                    </div>
-                    <h3 class="font-bold mb-2">UI Design</h3>
-                    <p class="text-sm text-gray-600">Creating beautiful, functional interfaces</p>
-                </div>
+<!-- Ridge -->
+<div class="ridge" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#152218" d="M0,80 L0,55 L60,28 L140,52 L220,18 L320,46 L400,22 L500,50 L580,16 L680,44 L760,20 L860,48 L960,18 L1040,46 L1140,24 L1240,52 L1320,28 L1400,50 L1440,38 L1440,80 Z"/></svg></div>
 
-                <div class="skill-card p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition text-center">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="user" class="text-primary w-8 h-8"></i>
-                    </div>
-                    <h3 class="font-bold mb-2">UX Research</h3>
-                    <p class="text-sm text-gray-600">Understanding user needs and behaviors</p>
-                </div>
+<!-- ═══════════════════════════════════════════
+     PROCESS
+════════════════════════════════════════════ -->
+<section class="section" id="process" style="background:var(--elev-alpine)">
+    <div class="container">
+        <div class="section-label">How It Works</div>
+        <h2 class="word-reveal">A proven process. <em>Predictable results.</em></h2>
 
-                <div class="skill-card p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition text-center">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="smartphone" class="text-primary w-8 h-8"></i>
-                    </div>
-                    <h3 class="font-bold mb-2">Mobile Design</h3>
-                    <p class="text-sm text-gray-600">Crafting seamless mobile experiences</p>
-                </div>
-
-                <div class="skill-card p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition text-center">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="code" class="text-primary w-8 h-8"></i>
-                    </div>
-                    <h3 class="font-bold mb-2">Prototyping</h3>
-                    <p class="text-sm text-gray-600">Interactive prototypes for validation</p>
-                </div>
-
-                <div class="skill-card p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition text-center">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="type" class="text-primary w-8 h-8"></i>
-                    </div>
-                    <h3 class="font-bold mb-2">Typography</h3>
-                    <p class="text-sm text-gray-600">Thoughtful type hierarchy and pairing</p>
-                </div>
-
-                <div class="skill-card p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition text-center">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="grid" class="text-primary w-8 h-8"></i>
-                    </div>
-                    <h3 class="font-bold mb-2">App Icon Design</h3>
-                    <p class="text-sm text-gray-600">Creating distinctive app icons</p>
+        <div class="process-steps">
+            <div class="process-step reveal-item">
+                <div class="step-num">01</div>
+                <div class="step-body">
+                    <h3>Discovery</h3>
+                    <p>A deep dive into your business, goals, competitive landscape, and current digital footprint. We audit your site, analyze your competitors' SEO, and find the fastest path to growth.</p>
                 </div>
             </div>
-
-            <div class="mt-16">
-                <h3 class="text-xl font-bold mb-6 text-center">Design Tools</h3>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <div class="tool-item bg-gray-50 px-6 py-3 rounded-full flex items-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" class="h-6 mr-2">
-                        <span>Figma</span>
-                    </div>
-                    <div class="tool-item bg-gray-50 px-6 py-3 rounded-full flex items-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Adobe_XD_CC_icon.svg" alt="Adobe XD" class="h-6 mr-2">
-                        <span>Adobe XD</span>
-                    </div>
-                    <div class="tool-item bg-gray-50 px-6 py-3 rounded-full flex items-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop" class="h-6 mr-2">
-                        <span>Photoshop</span>
-                    </div>
-                    <div class="tool-item bg-gray-50 px-6 py-3 rounded-full flex items-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Adobe_Illustrator_CC_icon.svg" alt="Illustrator" class="h-6 mr-2">
-                        <span>Illustrator</span>
-                    </div>
-                    <div class="tool-item bg-gray-50 px-6 py-3 rounded-full flex items-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Proto.io_Logo.svg" alt="Proto.io" class="h-6 mr-2">
-                        <span>Proto.io</span>
-                    </div>
-                    <div class="tool-item bg-gray-50 px-6 py-3 rounded-full flex items-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Android_Studio_Logo.svg" alt="Android Studio" class="h-6 mr-2">
-                        <span>Android Studio</span>
-                    </div>
+            <div class="process-step reveal-item">
+                <div class="step-num">02</div>
+                <div class="step-body">
+                    <h3>Strategy</h3>
+                    <p>A custom 90-day roadmap specific to your market and budget. You'll know exactly what we're building, why, when it launches, and what success looks like at 30/60/90 days.</p>
+                </div>
+            </div>
+            <div class="process-step reveal-item">
+                <div class="step-num">03</div>
+                <div class="step-body">
+                    <h3>Build</h3>
+                    <p>Our team designs, develops, and optimizes every asset — website, ad campaigns, SEO architecture, content — to spec and on schedule.</p>
+                </div>
+            </div>
+            <div class="process-step reveal-item">
+                <div class="step-num">04</div>
+                <div class="step-body">
+                    <h3>Launch</h3>
+                    <p>We go live with confidence. Everything is tested, tracked in Analytics, and verified across all devices before we flip the switch.</p>
+                </div>
+            </div>
+            <div class="process-step reveal-item">
+                <div class="step-num">05</div>
+                <div class="step-body">
+                    <h3>Grow</h3>
+                    <p>Monthly optimization, A/B testing, ranking improvements, and scaling what works. You get a full report every month — rankings, traffic, leads, and next month's action plan.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Testimonials -->
-    <section class="py-20 bg-gray-900 text-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
-                <p class="text-lg text-gray-300 max-w-2xl mx-auto">What people I've worked with say about my work</p>
+<!-- Ridge -->
+<div class="ridge" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#0e1c18" d="M0,80 L0,50 L80,22 L180,55 L280,20 L380,52 L460,18 L560,48 L660,14 L760,44 L860,16 L960,46 L1060,20 L1160,50 L1260,22 L1360,52 L1440,36 L1440,80 Z"/></svg></div>
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════ -->
+<section class="section" id="testimonials" style="background:var(--elev-rock)">
+    <div class="container">
+        <div class="section-label">Client Stories</div>
+        <h2 class="word-reveal">Don't take our word for it.</h2>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card reveal-item">
+                <div class="t-quote" aria-hidden="true">"</div>
+                <p class="t-text">We went from page 3 to the #1 spot for "Denver HVAC company" in 6 months. Our phone rings constantly now. We had to hire two more techs just to keep up — that's directly because of Evergreen.</p>
+                <div class="t-author">
+                    <div class="t-avatar">JM</div>
+                    <div>
+                        <strong>Jake Morrison</strong>
+                        <span>Owner, Rocky Mountain HVAC</span>
+                    </div>
+                </div>
+                <div class="t-stars">★★★★★</div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card bg-gray-800 p-8 rounded-xl">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://picsum.photos/seed/sarah/200/200" alt="Sarah Johnson" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Sarah Johnson</h4>
-                            <p class="text-gray-400 text-sm">Product Manager, TechCorp</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 mb-6">"Working with this designer was a game-changer for our product. They took the time to truly understand our users and delivered designs that exceeded our expectations."</p>
-                    <div class="flex text-yellow-400">
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+            <div class="testimonial-card reveal-item">
+                <div class="t-quote" aria-hidden="true">"</div>
+                <p class="t-text">Our e-commerce revenue nearly doubled in year one. The new site loads in under a second and SEO brings in customers we never had to chase. Every dollar we pay them comes back multiplied.</p>
+                <div class="t-author">
+                    <div class="t-avatar">SC</div>
+                    <div>
+                        <strong>Sarah Chen</strong>
+                        <span>Director, Colorado Pet Care</span>
                     </div>
                 </div>
+                <div class="t-stars">★★★★★</div>
+            </div>
 
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card bg-gray-800 p-8 rounded-xl">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://picsum.photos/seed/michael/200/200" alt="Michael Chen" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Michael Chen</h4>
-                            <p class="text-gray-400 text-sm">CEO, StartupHub</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 mb-6">"The redesign increased our conversion rate by 45%. Their attention to detail and user-centered approach made all the difference."</p>
-                    <div class="flex text-yellow-400">
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
+            <div class="testimonial-card reveal-item">
+                <div class="t-quote" aria-hidden="true">"</div>
+                <p class="t-text">They cut our Google Ads cost-per-lead by 67% in 90 days. More qualified roofing leads, less wasted spend. I wish I'd found them three years ago instead of burning money on my own campaigns.</p>
+                <div class="t-author">
+                    <div class="t-avatar">MT</div>
+                    <div>
+                        <strong>Mike Torres</strong>
+                        <span>General Manager, Summit Roofing Co.</span>
                     </div>
                 </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card bg-gray-800 p-8 rounded-xl">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://picsum.photos/seed/emma/200/200" alt="Emma Rodriguez" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Emma Rodriguez</h4>
-                            <p class="text-gray-400 text-sm">Marketing Director, BrandCo</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 mb-6">"Not only are the designs stunning, but they also solve real business problems. We've seen a significant improvement in user engagement since launch."</p>
-                    <div class="flex text-yellow-400">
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                        <i data-feather="star" class="w-5 h-5 fill-current"></i>
-                    </div>
-                </div>
+                <div class="t-stars">★★★★★</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CTA Section -->
-    <section id="contact" class="py-20 bg-primary text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to create something amazing together?</h2>
-            <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">I'm currently taking on new projects. Let's discuss how I can help bring your vision to life.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="mailto:hello@pixelcraft.design" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition duration-300 inline-block">Hire Me</a>
-                <a href="mailto:hello@pixelcraft.design" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition duration-300 inline-block">Contact Me</a>
+<!-- Ridge -->
+<div class="ridge" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#0d1f1a" d="M0,80 L0,58 L70,28 L150,55 L250,20 L360,50 L440,18 L540,46 L640,12 L740,42 L840,18 L940,48 L1040,16 L1140,44 L1240,20 L1340,48 L1440,32 L1440,80 Z"/></svg></div>
+
+<!-- ═══════════════════════════════════════════
+     PRICING
+════════════════════════════════════════════ -->
+<section class="section" id="pricing" style="background:var(--elev-valley)">
+    <div class="container">
+        <div class="section-label">Investment</div>
+        <h2 class="word-reveal">Transparent pricing. <em>No surprises.</em></h2>
+        <p class="section-desc">Every plan includes a dedicated account manager, monthly reporting, and our 90-day results guarantee. If we don't hit agreed milestones, we work free until we do.</p>
+
+        <div class="pricing-grid">
+            <div class="pricing-card reveal-item">
+                <div class="pricing-tier">Starter</div>
+                <div class="pricing-price">$1,497<span>/mo</span></div>
+                <p class="pricing-desc">For small businesses ready to establish a professional online presence and start ranking locally.</p>
+                <ul class="pricing-features">
+                    <li>5-page custom website</li>
+                    <li>Mobile-first design</li>
+                    <li>Google Business Profile setup &amp; optimization</li>
+                    <li>On-page SEO (10 keywords)</li>
+                    <li>Monthly performance report</li>
+                    <li>Hosting &amp; maintenance included</li>
+                </ul>
+                <a href="#contact" class="btn btn-ghost-gold">Get Started</a>
+            </div>
+
+            <div class="pricing-card pricing-featured reveal-item">
+                <div class="pricing-badge">Most Popular</div>
+                <div class="pricing-tier">Growth</div>
+                <div class="pricing-price">$2,997<span>/mo</span></div>
+                <p class="pricing-desc">For businesses serious about growth. Our most popular plan — the one behind most case studies above.</p>
+                <ul class="pricing-features">
+                    <li>Custom multi-page website</li>
+                    <li>Full SEO campaign (25+ keywords)</li>
+                    <li>Google Ads management (up to $5K/mo spend)</li>
+                    <li>Local SEO &amp; Google Maps optimization</li>
+                    <li>Conversion rate optimization</li>
+                    <li>Bi-weekly strategy calls</li>
+                    <li>Competitor rank monitoring</li>
+                    <li>Bi-weekly performance reports</li>
+                </ul>
+                <a href="#contact" class="btn btn-gold">Get Started</a>
+            </div>
+
+            <div class="pricing-card reveal-item">
+                <div class="pricing-tier">Authority</div>
+                <div class="pricing-price">$5,997<span>/mo</span></div>
+                <p class="pricing-desc">Complete digital dominance. For businesses ready to own their market and leave competitors behind.</p>
+                <ul class="pricing-features">
+                    <li>Everything in Growth</li>
+                    <li>Content marketing (4 posts/month)</li>
+                    <li>Facebook &amp; Instagram Ads</li>
+                    <li>Email marketing campaigns</li>
+                    <li>PR &amp; editorial link outreach</li>
+                    <li>Dedicated senior account manager</li>
+                    <li>Weekly strategy calls</li>
+                    <li>Custom live analytics dashboard</li>
+                </ul>
+                <a href="#contact" class="btn btn-ghost-gold">Get Started</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <custom-footer></custom-footer>
+<!-- Ridge -->
+<div class="ridge" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#0c1712" d="M0,80 L0,52 L80,24 L160,50 L260,16 L360,46 L460,20 L560,48 L660,14 L760,42 L860,14 L960,44 L1060,18 L1160,46 L1260,22 L1360,50 L1440,34 L1440,80 Z"/></svg></div>
 
-    <script src="components/navbar.js"></script>
-    <script src="components/footer.js"></script>
-    <script src="script.js"></script>
-    <script>
-        feather.replace();
-    </script>
+<!-- ═══════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════ -->
+<section class="section alpenglow topo-texture" id="contact" style="background:var(--elev-highcamp)">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="section-label">Let's Talk</div>
+                <h2 class="word-reveal">Let's build something <em>that lasts.</em></h2>
+                <p>Ready to grow? Fill out the form and we'll get back to you within one business day with a free strategy session — no obligation, no sales pressure.</p>
+
+                <dl class="contact-details">
+                    <div class="contact-row">
+                        <dt>Email</dt>
+                        <dd><a href="mailto:hello@evergreendigital.co">hello@evergreendigital.co</a></dd>
+                    </div>
+                    <div class="contact-row">
+                        <dt>Phone</dt>
+                        <dd><a href="tel:+13035550182">(303) 555-0182</a></dd>
+                    </div>
+                    <div class="contact-row">
+                        <dt>Office</dt>
+                        <dd>1600 Glenarm Pl, Suite 400<br>Denver, CO 80202</dd>
+                    </div>
+                </dl>
+
+                <div class="contact-badges">
+                    <div class="c-badge"><span class="c-stars">★★★★★</span><span>5.0 on Google</span></div>
+                    <div class="c-badge"><span>Google Partner</span></div>
+                    <div class="c-badge"><span>BBB Accredited</span></div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrap">
+                <form class="contact-form glass" id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="f-name">Full Name</label>
+                            <input type="text" id="f-name" name="name" placeholder="Jane Smith" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="f-company">Company</label>
+                            <input type="text" id="f-company" name="company" placeholder="Acme Co." autocomplete="organization">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="f-email">Email</label>
+                            <input type="email" id="f-email" name="email" placeholder="jane@acme.com" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="f-phone">Phone</label>
+                            <input type="tel" id="f-phone" name="phone" placeholder="(303) 555-0000" autocomplete="tel">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="f-service">Service Interested In</label>
+                        <select id="f-service" name="service">
+                            <option value="" disabled selected>Select a service…</option>
+                            <option>Web Design &amp; Development</option>
+                            <option>Search Engine Optimization</option>
+                            <option>Local SEO</option>
+                            <option>Google Ads (PPC)</option>
+                            <option>Social Media Marketing</option>
+                            <option>Full Digital Strategy</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="f-budget">Monthly Budget</label>
+                        <select id="f-budget" name="budget">
+                            <option value="" disabled selected>Select a range…</option>
+                            <option>Under $1,500/mo</option>
+                            <option>$1,500 – $3,000/mo</option>
+                            <option>$3,000 – $6,000/mo</option>
+                            <option>$6,000+/mo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="f-message">Tell us about your business</label>
+                        <textarea id="f-message" name="message" rows="4" placeholder="What are your main marketing goals? What have you tried before?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gold btn-full">Send Inquiry →</button>
+                    <div class="form-success" id="form-success" aria-live="polite">
+                        ✓ Message sent! We'll be in touch within one business day.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ridge -->
+<div class="ridge" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#070c09" d="M0,80 L0,50 L80,20 L180,50 L280,16 L380,48 L480,18 L580,46 L680,12 L780,42 L880,16 L980,44 L1080,18 L1180,46 L1280,22 L1380,50 L1440,34 L1440,80 Z"/></svg></div>
+
+<custom-footer></custom-footer>
+
+<script src="components/navbar.js"></script>
+<script src="components/footer.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
